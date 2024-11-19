@@ -1,0 +1,74 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* Typography */
+h1 {
+    font-family: "Sometype Mono", monospace;
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+.card-text {
+    font-family: "Edu TAS Beginner", cursive;
+}
+
+
+/* COMMON */
+/* Layout */
+body {
+    background-image: url(../img/cork.png);
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-image: url(../img/wall.png);
+    text-align: center;
+    height: 100px;
+    padding: 20px 0;
+}
+
+/* Main */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+.col {
+    width: calc((100% - 20px) / 3);
+    position: relative;
+}
+
+.card-photo {
+    background-color: white;
+    padding: 15px 15px 20px 15px;
+}
+
+.photo {
+    padding-bottom: 20px;
+    object-fit: cover;
+}
+
+.card-photo::after {
+    content: url(../img/pin.svg);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
