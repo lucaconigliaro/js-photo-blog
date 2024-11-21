@@ -1,7 +1,7 @@
 const rowElem = document.querySelector(".m-row");
 const overlayElem = document.getElementById("overlay");
 const overlayBtn = document.getElementById("overlay-btn");
-const imgCurElem = document.querySelector("img-cur");
+const imgCurElem = document.querySelector(".img-cur");
 let photosArray = [];
 
 const printPhotos = () => {
@@ -18,16 +18,17 @@ const printPhotos = () => {
             </div>
             `;
     });
-    rowElem.innerHTML = result
+    rowElem.innerHTML = result;
 }
 
 
 // Mostro overlay
 const showOverlay = (clickElem) => {
     const postId = clickElem.dataset.postId;
-    console.log(postId);
-    const imgElem = photosArray.find((curItem) => curItem.id === postId);
-    console.log(imgElem);
+    // console.log(postId);
+    const imgElem = photosArray.find((curItem) => curItem.id == postId);
+    // console.log(imgElem);
+    imgCurElem.innerHTML = `<img src="${imgElem.url}" alt="" style="width: 500px;">`;
     overlayElem.classList.remove("d-none");
     overlayElem.classList.add("d-flex");
 };
@@ -44,7 +45,7 @@ const addEvent = () => {
     photos.forEach((curPhotos) => {
         curPhotos.addEventListener("click", () => showOverlay(curPhotos));
     });
-};
+}
 
 
 // Axios

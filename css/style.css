@@ -81,7 +81,7 @@ body {
     left: 50%;
     transform: translate(-50%, -20%);
 }
- 
+
 .overlay {
     background-color: rgba(0, 0, 0, 0.8);
     height: 100vh;
@@ -94,6 +94,13 @@ body {
     row-gap: 20px;
     justify-content: center;
     align-items: center;
+}
+
+/* Hover */
+.m-col:hover {
+    transform: rotate(10deg) scale(1.1);
+    z-index: 999;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 1);
 }
 
 /* Media query */
